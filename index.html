@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CALCULADORA</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+
+    </head>
+
+    <body style="background-color:#FBEFF2 ;">
+        
+        <h1>Calculadora Basica</h1>
+        <div id="calculadora">
+        
+            <input type="text" disabled placeholder="0" class="visor" id="display">
+            <div class="BotoesCentrais">
+
+                <button onclick="calculadora('valor',7)" >7</button>
+                <button onclick="calculadora('valor',8)" >8</button>
+                <button onclick="calculadora('valor',9)" >9</button>
+                <button onclick="calculadora('simbolo','C')" class="BotoesLaterais">C</button>
+                <button onclick="calculadora('simbolo','Ce')">CE</button>
+
+            </div>
+
+            <div class="BotoesCentrais">
+
+                <button onclick="calculadora('valor',4)">4</button>
+                <button onclick="calculadora('valor',5)">5</button>
+                <button onclick="calculadora('valor',6)">6</button>
+                <button onclick="calculadora('simbolo','/')" class="BotoesLaterais">/</button>
+                <button onclick="calculadora('simbolo','*')">x</button>
+
+            </div>
+
+            <div class="BotoesCentrais">
+
+                <button onclick="calculadora('valor',1)">1</button>
+                <button onclick="calculadora('valor',2)">2</button>
+                <button onclick="calculadora('valor',3)">3</button>
+                <button onclick="calculadora('simbolo','-')" class="BotoesLaterais">-</button>
+                <button onclick="calculadora('simbolo','+')">+</button>
+
+            </div>
+
+            <div class="BotoesCentrais">
+
+                <button onclick="calculadora('valor',0)">0</button>
+                <button onclick="calculadora('simbolo','.')">.</button>
+                <button onclick="calculadora('simbolo','=')">=</button>
+                <button onclick="calculadora('simbolo','p1')" class="BotoesLaterais">(</button>
+                <button onclick="calculadora('simbolo','p2')">)</button>
+
+            </div>
+           
+        </div>
+
+    
+    </body>
+
+</html>

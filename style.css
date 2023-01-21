@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#calculadora{
+    border: 10px solid #190710;
+    width: 350px;
+    height: 250px;
+    margin-left: 23.5em;
+    margin-top: 8.5em;
+    background-color:#FF0000 ;
+}
+
+.visor{
+    margin: 10px 10px 20px 10px;
+    width: 320px;
+    height: 40px;
+    text-align: right;
+    border: 5px solid #190710;
+    background-color:#F2F2F2 ;
+}
+
+button{
+    width: 50px;
+    border: 3px solid #190710;
+    margin: 0px;
+}
+
+.BotoesCentrais{
+    padding: 10px 20px 10px 20px;
+}
+
+.BotoesLaterais{
+    margin-left: 40px;
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+
+}
