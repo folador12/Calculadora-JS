@@ -15,59 +15,44 @@
 
     </head>
 
-    <body style="background-color:#FBEFF2 ;">
-
-        <div class="centralizar">
-
+    <body>
+        <div class="fundo">
+            <h1>Calculadora</h1>
             <div class="calculadora">
-            
                 <input type="text" disabled placeholder="0" class="visor" id="display">
-
-                <div class="BotoesCentrais">
-
-                    <button onclick="calculadora('valor',7)" >7</button>
-                    <button onclick="calculadora('valor',8)" >8</button>
-                    <button onclick="calculadora('valor',9)" >9</button>
-                    <button onclick="calculadora('simbolo','C')" class="BotoesLaterais">C</button>
-                    <button onclick="calculadora('simbolo','Ce')">CE</button>
-
-                </div>
-
-                <div class="BotoesCentrais">
-
-                    <button onclick="calculadora('valor',4)">4</button>
-                    <button onclick="calculadora('valor',5)">5</button>
-                    <button onclick="calculadora('valor',6)">6</button>
-                    <button onclick="calculadora('simbolo','/')" class="BotoesLaterais">/</button>
-                    <button onclick="calculadora('simbolo','*')">x</button>
-
-                </div>
-
-                <div class="BotoesCentrais">
-
-                    <button onclick="calculadora('valor',1)">1</button>
-                    <button onclick="calculadora('valor',2)">2</button>
-                    <button onclick="calculadora('valor',3)">3</button>
-                    <button onclick="calculadora('simbolo','-')" class="BotoesLaterais">-</button>
-                    <button onclick="calculadora('simbolo','+')">+</button>
-
-                </div>
-
-                <div class="BotoesCentrais">
-
-                    <button onclick="calculadora('valor',0)">0</button>
-                    <button onclick="calculadora('simbolo','.')">.</button>
-                    <button onclick="calculadora('simbolo','=')">=</button>
-                    <button onclick="calculadora('simbolo','p1')" class="BotoesLaterais">(</button>
-                    <button onclick="calculadora('simbolo','p2')">)</button>
-
-                </div>
-            
+                <table>
+                    <tr>
+                        <td><button onclick="calculadora('simbolo','C')" class="botao">C</button></td>
+                        <td><button onclick="calculadora('simbolo','Ce')" class="botao">⇦</button></td>
+                        <td><button onclick="calculadora('simbolo','p1')" class="botao">()</button></td>
+                        <td><button onclick="calculadora('simbolo','/')" class="botao">÷</button></td>
+                    </tr>
+                    <tr>
+                    <td><button onclick="calculadora('valor',7)" class="botao">7</button></td> 
+                    <td><button onclick="calculadora('valor',8)" class="botao">8</button></td>
+                    <td><button onclick="calculadora('valor',9)" class="botao">9</button></td>
+                    <td><button onclick="calculadora('simbolo','*')" class="botao">x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="calculadora('valor',4)" class="botao">4</button></td>
+                        <td><button onclick="calculadora('valor',5)" class="botao">5</button></td>
+                        <td><button onclick="calculadora('valor',6)" class="botao">6</button></td>
+                        <td><button onclick="calculadora('simbolo','-')" class="botao">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="calculadora('valor',1)" class="botao">1</button></td>
+                        <td><button onclick="calculadora('valor',2)" class="botao">2</button></td>
+                        <td><button onclick="calculadora('valor',3)" class="botao">3</button></td>
+                        <td><button onclick="calculadora('simbolo','+')" class="botao">+</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button onclick="calculadora('valor',0)" class="botao" style="width: 106px;">0</button></td>
+                        <td><button onclick="calculadora('simbolo','.')" class="botao">.</button></td>
+                        <td><button onclick="calculadora('simbolo','=')" class="botao">=</button></td>
+                    </tr>
+                </table>                    
             </div>
-
         </div>
         
-    
     </body>
-
 </html>

@@ -1,12 +1,15 @@
+var cont =0;
 function calculadora(tipo,valor){
     if(document.getElementById("display").value.length < 15){
         if(tipo === 'simbolo')
-        {
-            if(valor === 'C') //apaga tudo
+        {   
+            //apaga tudo
+            if(valor === 'C') 
             {
                 document.getElementById("display").value = ''
             }
-            else if(valor === 'Ce') //apaga o ultimo digito
+            //apaga o ultimo digito
+            else if(valor === 'Ce') 
             {   
                 let tamanho = document.getElementById("display").value.length;
 
@@ -14,16 +17,24 @@ function calculadora(tipo,valor){
                 
                 document.getElementById("display").value = valor2;
             }
-            else if(valor === '/' || valor === '*' || valor === '+' || valor === '-' || valor === '.')
-            {
-                document.getElementById("display").value += valor;
-            }
+            //Parenteses
             else if(valor==='p1'){
-                document.getElementById("display").value += '('; 
+                let texto = document.getElementById("display").value;
+                if(texto.lastIndexOf("(") === -1){
+                    document.getElementById("display").value += '('; 
+                    cont++;
+                }
+                else if(texto.lastIndexOf("(") != -1 && texto.lastIndexOf(")") != -1 && cont != 1 ){
+                    document.getElementById("display").value += '('; 
+                    cont++;
+                }
+                else{
+                    document.getElementById("display").value += ')'; 
+                    cont = 0;
+                }
+                
             }
-            else if(valor==='p2'){
-                document.getElementById("display").value += ')'; 
-            }
+            //Calculo das contas
             else if(valor==='=')
             {
                 var conta = eval(document.getElementById("display").value);
@@ -32,26 +43,14 @@ function calculadora(tipo,valor){
                 }
 
             }
+            else 
+            {
+                document.getElementById("display").value += valor;
+            }
             
         }
         else if(tipo === 'valor'){
-            switch(valor)
-            {
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                case 8:
-                case 9:
-                case 0:
-                    document.getElementById("display").value += valor;
-                    break;
-                default:
-                    document.getElementById("display").value += 'Numero não reconhecido';
-            }
+            document.getElementById("display").value += valor;
         }
     }
     else
